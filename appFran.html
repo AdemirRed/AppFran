@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Total</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <textarea type="text" id="texto" placeholder="Cole o texto aqui..."></textarea>
+    <button onclick="calcularTotal()">Calcular</button>
+
+    <script>
+        function calcularTotal() {
+            const texto = document.getElementById("texto").value;
+
+            // Use uma expressão regular para encontrar os valores finais
+            const regex = /R\$ (\d+(?:,\d{2})?)/g;
+
+            // Inicialize a variável para armazenar o total
+            let total = 0;
+
+            // Percorra o texto usando a expressão regular
+            let match;
+            while ((match = regex.exec(texto)) !== null) {
+                total += parseFloat(match[1].replace(',', '.'));
+            }
+
+            document.getElementById("resultado").textContent = `Valor total: R$ ${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>
