@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #00ff00;
+}
+
+body {
+    background: black;
+}
+
+.resultado {
+    margin-top: 2%;
+}
+
+.principal,
+.resultado {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    margin-top: 20px;
+    background-color: black;
+    border: solid 2px greenyellow;
+    border-radius: 20px;
+    padding: 20px;
+    width: 50vw;
+    height: 500px;
+    position: relative;
+    /* Torna o textarea um contexto de posicionamento */
+    outline: none;
+}
+
+textarea::placeholder {
+    position: absolute;
+    /* Posicionamento absoluto em relação ao textarea */
+    top: 10%;
+    /* Move o placeholder para o centro vertical */
+    left: 50%;
+    /* Move o placeholder para o centro horizontal */
+    transform: translate(-50%, -50%);
+    /* Corrige a posição do placeholder */
+    font-weight: bold;
+    font-size: 15px;
+    color: greenyellow;
+    /* Cor do placeholder */
+}
+
+
+button {
+    margin-top: 20px;
+    width: 85vw;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #00ff00;
+    /* Cor verde neon */
+    color: #fff;
+    /* Cor do texto */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    /* Transição suave para o efeito */
+}
+
+button:hover {
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+    /* Sombra neon */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+    /* Texto neon */
+}
+
+
+
+/* Barra de rolagem */
+textarea::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra de rolagem */
+}
+
+/* Botão da barra de rolagem */
+textarea::-webkit-scrollbar-thumb {
+    background-color: greenyellow;
+    /* Cor do botão da barra de rolagem */
+    border-radius: 5px;
+    /* Raio da borda do botão da barra de rolagem */
+}
+
+/* Estilo quando passa o mouse sobre a barra de rolagem */
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: lime;
+    /* Cor do botão da barra de rolagem ao passar o mouse sobre ele */
+}

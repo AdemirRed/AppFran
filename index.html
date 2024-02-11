@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculadora de Total</title>
 </head>
 
 <body>
-    <h1 id="resultado"></h1>
-    <textarea type="text" id="texto" placeholder="Cole o texto aqui..." style="width: 338px; height: 719px;"></textarea>
-    <button onclick="calcularTotal()">Calcular</button>
-
+    <div class="resultado">
+        <h1 id="resultado"></h1>
+    </div>
+    <div class="principal">
+        <textarea type="number" id="texto" placeholder="Cole o texto aqui..."
+            ></textarea>
+    </div>
+    <div class="principal">
+        <button onclick="calcularTotal()">Calcular</button>
+    </div>
     <script>
         function calcularTotal() {
             const texto = document.getElementById("texto").value;
